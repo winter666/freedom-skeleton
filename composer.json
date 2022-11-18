@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "Freedom\\App\\": "src/"
-        }
+        },
+        "files": [ "router/index.php" ]
     },
     "authors": [
         {
@@ -12,8 +13,7 @@
         }
     ],
     "require": {
-        "winter666/freedom": "@dev",
-        "ext-pdo": "*"
+        "winter666/freedom": "@dev"
     },
     "repositories": {
         "freedom": {
