@@ -11,5 +11,17 @@
             "email": "sergeev.davutt@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "winter666/freedom": "@dev",
+        "ext-pdo": "*"
+    },
+    "repositories": {
+        "freedom": {
+            "type": "path",
+            "url": "/OpenServer/domains/packages/freedom",
+            "options": {
+                "symlink": true
+            }
+        }
+    }
 }
