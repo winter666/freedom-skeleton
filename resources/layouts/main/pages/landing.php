@@ -15,5 +15,8 @@
         <div class="title-block">
             <h3>Meet first lite framework, before you learn other large frameworks</h3>
         </div>
+        <div class="title-block">
+            <div>See an <a href="/api-docs">API documentation</a></div>
+        </div>
     </div>
 </div>
