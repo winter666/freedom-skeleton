@@ -3,8 +3,7 @@
     "autoload": {
         "psr-4": {
             "Freedom\\App\\": "src/"
-        },
-        "files": [ "router/index.php" ]
+        }
     },
     "authors": [
         {
