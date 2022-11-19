@@ -40,7 +40,7 @@ $path = substr(__DIR__, 0, $diff);
 Session::i()->set('project_path', $path);
 
 if (!isset($_SERVER['argv'][1])) {
-    echo '[ERROR]: Command name is required, Signature php bin\\console.php <name>';
+    echo '[ERROR]: Command name is required, Signature php console.php <name>';
     return 1;
 }
 
