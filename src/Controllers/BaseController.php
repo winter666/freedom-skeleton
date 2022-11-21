@@ -19,4 +19,14 @@ class BaseController extends Controller
         $renderer->addCss('head', 'css.landing');
         return $renderer;
     }
+
+    public function showAll()
+    {
+        return 'All';
+    }
+
+    public function showOne()
+    {
+        return 'One';
+    }
 }
