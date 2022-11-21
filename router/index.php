@@ -9,41 +9,8 @@ Router::get('/news', ['controller' => BaseController::class, 'method' => 'showAl
 Router::get('/news/{id}', ['controller' => BaseController::class, 'method' => 'showOne']);
 
 // Api Documentation
-Router::get('/api-docs', function () {
-    $render = Layout::view('main',
-        ['page' => 'pages.docs.index', 'doc_chapter' => 'pages.docs.main'],
-        ['title' => 'API Documentation']
-    );
-    $render->addCss('head', 'css.docs');
-    return $render;
-});
-
-Router::get('/api-docs/mvc', function () {
-    $render = Layout::view('main',
-        ['page' => 'pages.docs.index', 'doc_chapter' => 'pages.docs.mvc.index'],
-        ['title' => 'MVC Concepts'],
-    );
-    $render->addCss('head', 'css.docs');
-    return $render;
-});
-
-Router::get('/api-docs/mvc/router', function () {
-    $render = Layout::view('main',
-        ['page' => 'pages.docs.index', 'doc_chapter' => 'pages.docs.mvc.router'],
-        ['title' => 'Router'],
-    );
-    $render->addCss('head', 'css.docs');
-    return $render;
-});
-
-Router::get('/api-docs/mvc/controller', function () {
-    $render = Layout::view('main',
-        ['page' => 'pages.docs.index', 'doc_chapter' => 'pages.docs.mvc.controller'],
-        ['title' => 'Controller'],
-    );
-    $render->addCss('head', 'css.docs');
-    return $render;
-});
+Router::get('/api-docs', [\Freedom\App\Controllers\ApiDocsController::class, 'index']);
+Router::get('/api-docs/mvc/{page?}', [\Freedom\App\Controllers\ApiDocsController::class, 'mvc']);
 
 Router::fallback(function () {
     return Layout::view('main', [

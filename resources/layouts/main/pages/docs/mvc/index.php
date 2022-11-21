@@ -1,4 +1,25 @@
-<h2>MVC Concepts</h2>
-<p>
-    This article about basic MVC Concepts. In this articles you'll find out how to work with <a href="/api-docs/mvc/router">Router Module</a> and how to handle Requests with <a href="/api-docs/mvc/controller">Controller Module</a>
-</p>
+<?php
+/**
+ * @var string $title
+ * @var string $content
+ * @var string $description
+ * @var array $menu
+ */
+?>
+<div>
+    <div class="article-part">
+        <h2><?= $title; ?></h2>
+        <?php if (count($menu)): ?>
+        <div>
+            <ul class="article-content">
+                <?php foreach ($menu as $item): ?>
+                    <li class="item"><a href="<?= $item['link']; ?>"><?= $item['name']; ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <?php endif; ?>
+        <?= $description; ?>
+    </div>
+    <?= $content; ?>
+</div>
+
