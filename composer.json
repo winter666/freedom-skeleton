@@ -3,8 +3,7 @@
     "autoload": {
         "psr-4": {
             "Freedom\\App\\": "src/"
-        },
-        "files": [ "router/index.php" ]
+        }
     },
     "authors": [
         {
@@ -18,7 +17,7 @@
     "repositories": {
         "freedom": {
             "type": "path",
-            "url": "/path/to/freedom-core",
+            "url": "/OpenServer/domains/packages/freedom",
             "options": {
                 "symlink": true
             }

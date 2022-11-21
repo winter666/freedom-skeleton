@@ -102,8 +102,7 @@
                 <i class="pos"><i class="internal-brown">public function</i> <i class="method-name">responseWithLayoutMethod</i>()
                     {</i>
                 <i class="pos">
-                    <!-- TODO: допилить -->
-                    <i class="pos"><i class="internal-brown">return</i> <i>'Hello world!'</i></i>
+                    <i class="pos"><i class="internal-brown">return</i> <i>Layout::<i class="method-name">view</i>(<i class="value-str">'layout_name'</i><i class="internal-brown">,</i> []<i class="internal-brown">,</i> []);</i></i>
                 </i>
                 <i class="pos">}</i>
                 &nbsp;

@@ -4,7 +4,6 @@
         <div>
             <ul class="article-content">
                 <li class="item"><a href="#syntax">Syntax</a></li>
-                <li class="item"><a href="#init-routing">Init</a></li>
                 <li class="item"><a href="#handle-requests">Handle Requests</a></li>
                 <li class="item"><a href="#handle-404">Handle 404</a></li>
             </ul>
@@ -33,28 +32,6 @@
         </p>
     </div>
     <div class="article-part">
-        <h3 id="init-routing">Init</h3>
-        <p>
-            For use routing at first you need initial Routing Module. It only needs to be done once.
-        </p>
-        <p>
-            You must do this before declare some routes:
-            <code>
-                <i class="comment">// First declare Router Module</i>
-                <i class="pos">Router::<i class="method-name">init</i>()<i class="internal-brown">;</i></i>
-                <i class="comment">// Next declare some route</i>
-                <i class="pos">Router::<i class="method-name">get</i>(<i class="value-str">'/some-url'</i><i class="internal-brown">, function</i> () { <i class="comment">// Some body</i> })<i class="internal-brown">;</i></i>
-            </code>
-        </p>
-        <p>
-            This is Controller use syntax:
-            <code>
-                <i class="pos">Router::<i class="method-name">get</i>(<i class="value-str">'/some-url'</i>, [<i class="value-str">'controller'</i> => SomeController::<i class="internal-brown">class,</i> <i class="value-str">'method'</i> => <i class="value-str">'someMethodName'</i>])<i class="internal-brown">;</i></i>
-            </code>
-            In this case, you need to create Controller, and declare in this route, like a SomeController in example.
-        </p>
-    </div>
-    <div class="article-part">
         <h3 id="handle-requests">Handle Requests</h3>
         <p>
             For handle different requests you must use special methods from Route class. This methods have a similar argument signature.
@@ -70,16 +47,16 @@
         <p>
             404 Error is a special response from server, it says about that resource what are you looking for - was not found.
             And for handle this error, Router class have special static method - <q>fallback()</q>.
-            As the first argument - the way of handle error, as the second - "whether to use redirect?" and third - if the second argument is true - "where to redirect?" (url string value)
+            As the first argument - the way of handle error.
         </p>
         <p>
             Closure-use syntax for this:
             <code>
-                <i class="pos">Router::<i class="method-name">fallback</i>(<i class="internal-brown">function</i> () { <i class="comment">// fallback handle</i> }, <i class="internal-brown">false</i>)<i class="internal-brown">;</i></i>
+                <i class="pos">Router::<i class="method-name">fallback</i>(<i class="internal-brown">function</i> () { <i class="comment">// fallback handle</i> })<i class="internal-brown">;</i></i>
             </code>
             It's may be a Controller-use handle:
             <code>
-                <i class="pos">Router::<i class="method-name">fallback</i>([<i class="value-str">'controller'</i> => FallbackController::<i class="internal-brown">class,</i> <i class="value-str">'method'</i> => <i class="value-str">'handleMethodName'</i>], <i class="internal-brown">false</i>)<i class="internal-brown">;</i></i>
+                <i class="pos">Router::<i class="method-name">fallback</i>([<i class="value-str">'controller'</i> => FallbackController::<i class="internal-brown">class,</i> <i class="value-str">'method'</i> => <i class="value-str">'handleMethodName'</i>])<i class="internal-brown">;</i></i>
             </code>
         </p>
     </div>
