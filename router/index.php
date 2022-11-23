@@ -9,8 +9,7 @@ Router::get('/news', ['controller' => BaseController::class, 'method' => 'showAl
 Router::get('/news/{id}', ['controller' => BaseController::class, 'method' => 'showOne']);
 
 // Api Documentation
-Router::get('/api-docs', [\Freedom\App\Controllers\ApiDocsController::class, 'index']);
-Router::get('/api-docs/mvc/{page?}', [\Freedom\App\Controllers\ApiDocsController::class, 'mvc']);
+require 'api-docs/docs.php';
 
 Router::fallback(function () {
     return Layout::view('main', [
